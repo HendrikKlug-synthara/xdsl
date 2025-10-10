@@ -32,7 +32,7 @@ from xdsl.dialects.utils.reshape_ops_utils import (
     ContiguousArrayOfIntArray,
     verify_reshape_like_types,
 )
-from xdsl.ir import Attribute, Dialect, Operation, SSAValue
+from xdsl.ir import Attribute, Dialect, Operation, Region, SSAValue
 from xdsl.irdl import (
     AnyAttr,
     AttrSizedOperandSegments,
@@ -869,6 +869,7 @@ Tensor = Dialect(
         FromElementsOp,
         InsertOp,
         InsertSliceOp,
+        PadOp,
         ReshapeOp,
         SplatOp,
         PadOp,
